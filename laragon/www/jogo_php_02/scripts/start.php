@@ -1,5 +1,20 @@
 <?php
 
+ if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+    $total_questions = intval($_POST['text_total_questions']) ?? 10;
+
+    prepare_game($total_questions);
+
+    header('Location: index.php?route=game');
+    exit;
+
+    }
+
+    function prepare_game($total_questions)
+    {
+        die('prepare game');
+    }
 ?>
 
 <div class="container mt-5">
